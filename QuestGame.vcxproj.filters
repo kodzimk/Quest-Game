@@ -16,6 +16,9 @@
     <Filter Include="States">
       <UniqueIdentifier>{200e8aa6-6714-4ba4-b7b8-6808d72ba226}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Maps">
+      <UniqueIdentifier>{6755664c-73c4-48bc-9b4b-7e97efd2e124}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -36,6 +39,18 @@
     <ClCompile Include="stdafh.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="MainMap.cpp">
+      <Filter>Maps</Filter>
+    </ClCompile>
+    <ClCompile Include="FirstHome.cpp">
+      <Filter>Maps</Filter>
+    </ClCompile>
+    <ClCompile Include="SecondHome.cpp">
+      <Filter>Maps</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdHome.cpp">
+      <Filter>Maps</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -52,6 +67,18 @@
     </ClInclude>
     <ClInclude Include="stdafh.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMap.h">
+      <Filter>Maps</Filter>
+    </ClInclude>
+    <ClInclude Include="FirstHome.h">
+      <Filter>Maps</Filter>
+    </ClInclude>
+    <ClInclude Include="SecondHome.h">
+      <Filter>Maps</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdHome.h">
+      <Filter>Maps</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

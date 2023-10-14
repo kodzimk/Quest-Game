@@ -17,7 +17,7 @@ void Game::update()
 {
 	while (this->states.size() != 0)
 	{
-		this->states.top()->update(this->states);
+		this->states.top()->update(&this->states);
 		if (this->states.size() != 0)
 			this->states.top()->render();
 	}

@@ -30,7 +30,7 @@ MainMenuState::MainMenuState()
 	shape.setFillColor(sf::Color(10, 10, 10, 220));
 	shape.setSize(sf::Vector2f(400,1080));
 	shape.setPosition(150, 0);
-	
+	this->mousePOsView = sf::Vector2f();
 	
 }
 
@@ -39,8 +39,32 @@ MainMenuState::~MainMenuState()
 	delete this->window;
 }
 
-void MainMenuState::update(std::stack<State*>states)
+void MainMenuState::changeStates(std::stack<State*>* states)
 {
+	this->mousePOsView = sf::Vector2f(sf::Mouse::getPosition(*window));
+
+	if (this->playText.getGlobalBounds().contains(this->mousePOsView)&&sf::Mouse::isButtonPressed(sf::Mouse::Left))
+	{
+		while (states->size() != 0)
+		{
+			states->pop();
+		}
+		window->close();
+		states->push(new GameState());
+	}
+	if (this->quitText.getGlobalBounds().contains(this->mousePOsView)&&sf::Mouse::isButtonPressed(sf::Mouse::Left))
+	{
+		while (states->size() != 0)
+		{
+			states->pop();
+		}
+		window->close();
+	}
+}
+
+void MainMenuState::update(std::stack<State*>*states)
+{
+	this->changeStates(states);
 }
 
 void MainMenuState::render()
